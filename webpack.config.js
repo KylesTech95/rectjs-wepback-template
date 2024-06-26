@@ -43,5 +43,8 @@ module.exports = {
   // plugins
   plugins: [
     new HtmlPlug(htmlConfig()),
+    new MiniCssExtractPlugin({
+        filename:'[name].css'
+    })
   ],
 };
