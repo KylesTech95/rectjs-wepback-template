@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlPlug = require("html-webpack-plugin");
 const htmlConfig = require("./config/html.config.js");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // import rules
 const rules = {
@@ -20,10 +21,7 @@ module.exports = {
   },
   //   module{rules}
   module: {
-    rules: [
-      rules.js,
-      rules.styles,
-    ],
+    rules: [rules.js, rules.styles],
   },
 
   // devtool
@@ -37,11 +35,13 @@ module.exports = {
     hot: false,
     proxy: [
       {
-        context: ["/api","/cfg","/reviews"],
+        context: ["/api", "/cfg", "/reviews"],
         target: "http://localhost:6655",
       },
     ],
   },
   // plugins
-  plugins: [new HtmlPlug(htmlConfig())],
+  plugins: [
+    new HtmlPlug(htmlConfig()),
+  ],
 };
