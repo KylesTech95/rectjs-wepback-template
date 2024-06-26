@@ -38,13 +38,21 @@ var HovComponent = function HovComponent(_ref) {
         y: e.pageY
       });
       switch (true) {
-        case e.pageX < window.innerWidth / 2 && e.pageY < window.innerHeight / 2:
+        case e.pageX > window.innerWidth / 2 && e.pageY > window.innerHeight / 2:
           console.log(e.pageX, e.pageY);
-          bgd.style.backgroundColor = colors[1];
+          bgd.style.backgroundColor = colors[0];
           break;
         case e.pageX < window.innerWidth / 2 && e.pageY > window.innerHeight / 2:
           console.log(e.pageX, e.pageY);
+          bgd.style.backgroundColor = colors[1];
+          break;
+        case e.pageX > window.innerWidth / 2 && e.pageY < window.innerHeight / 2:
+          console.log(e.pageX, e.pageY);
           bgd.style.backgroundColor = colors[2];
+          break;
+        case e.pageX < window.innerWidth / 2 && e.pageY < window.innerHeight / 2:
+          console.log(e.pageX, e.pageY);
+          bgd.style.backgroundColor = colors[3];
           break;
         default:
           console.log(undefined);
@@ -63,6 +71,7 @@ var HovComponent = function HovComponent(_ref) {
       top: pos.y
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "mouse-actual",
     style: {
       textAlign: "center",
       height: 200,
@@ -80,7 +89,7 @@ var App = function App() {
     setText("text changed");
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
-    className: "hello",
+    className: "textchange",
     onClick: handleTextChange
   }, text), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(HovComponent, {
     colors: colors
@@ -133,7 +142,7 @@ section{
     width:100%;
     border:2px solid #333;
 }
-section>h1{
+.mouse-actual,.textchange{
     height:100%;
     width:inherit;
     text-align: center;
@@ -141,8 +150,15 @@ section>h1{
     flex-direction: column;
     align-items:center;
     justify-content: center;
+    padding:16px;
 
-}`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;IACI,QAAQ;IACR,SAAS;IACT,sBAAsB;AAC1B;;AAEA;IACI,cAAc;IACd,YAAY;IACZ,sBAAsB;IACtB,kBAAkB;IAClB,uBAAuB;IACvB,YAAY;IACZ,UAAU;AACd;AACA;IACI,YAAY;IACZ,sBAAsB;IACtB,kBAAkB;IAClB,uBAAuB;IACvB,YAAY;IACZ,UAAU;IACV,qBAAqB;AACzB;AACA;IACI,WAAW;IACX,aAAa;IACb,kBAAkB;IAClB,YAAY;IACZ,sBAAsB;IACtB,kBAAkB;IAClB,uBAAuB;;AAE3B","sourcesContent":["*{\r\n    margin:0;\r\n    padding:0;\r\n    box-sizing: border-box;\r\n}\r\n\r\nbody{\r\n    background:red;\r\n    display:flex;\r\n    flex-direction: column;\r\n    align-items:center;\r\n    justify-content: center;\r\n    height:100vh;\r\n    width:100%;\r\n}\r\nsection{\r\n    display:flex;\r\n    flex-direction: column;\r\n    align-items:center;\r\n    justify-content: center;\r\n    height:100vh;\r\n    width:100%;\r\n    border:2px solid #333;\r\n}\r\nsection>h1{\r\n    height:100%;\r\n    width:inherit;\r\n    text-align: center;\r\n    display:flex;\r\n    flex-direction: column;\r\n    align-items:center;\r\n    justify-content: center;\r\n\r\n}"],"sourceRoot":""}]);
+
+}
+.textchange{
+    border:2px solid #fff;
+}
+
+`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;IACI,QAAQ;IACR,SAAS;IACT,sBAAsB;AAC1B;;AAEA;IACI,cAAc;IACd,YAAY;IACZ,sBAAsB;IACtB,kBAAkB;IAClB,uBAAuB;IACvB,YAAY;IACZ,UAAU;AACd;AACA;IACI,YAAY;IACZ,sBAAsB;IACtB,kBAAkB;IAClB,uBAAuB;IACvB,YAAY;IACZ,UAAU;IACV,qBAAqB;AACzB;AACA;IACI,WAAW;IACX,aAAa;IACb,kBAAkB;IAClB,YAAY;IACZ,sBAAsB;IACtB,kBAAkB;IAClB,uBAAuB;IACvB,YAAY;;;AAGhB;AACA;IACI,qBAAqB;AACzB","sourcesContent":["*{\r\n    margin:0;\r\n    padding:0;\r\n    box-sizing: border-box;\r\n}\r\n\r\nbody{\r\n    background:red;\r\n    display:flex;\r\n    flex-direction: column;\r\n    align-items:center;\r\n    justify-content: center;\r\n    height:100vh;\r\n    width:100%;\r\n}\r\nsection{\r\n    display:flex;\r\n    flex-direction: column;\r\n    align-items:center;\r\n    justify-content: center;\r\n    height:100vh;\r\n    width:100%;\r\n    border:2px solid #333;\r\n}\r\n.mouse-actual,.textchange{\r\n    height:100%;\r\n    width:inherit;\r\n    text-align: center;\r\n    display:flex;\r\n    flex-direction: column;\r\n    align-items:center;\r\n    justify-content: center;\r\n    padding:16px;\r\n\r\n\r\n}\r\n.textchange{\r\n    border:2px solid #fff;\r\n}\r\n\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
