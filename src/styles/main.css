@@ -22,6 +22,9 @@ body{
     height:100vh;
     width:100%;
 }
+p#para{
+    font-size: responsive;
+}
 section{
     display:flex;
     flex-direction: column;
