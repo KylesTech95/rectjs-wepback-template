@@ -9,7 +9,13 @@ module.exports = {
     // multi entry: open up more zippers
     entry:[path.resolve(__dirname,'src/index.js'),path.resolve(__dirname,'src/index2.js')],
 
-
+    // modules
+    module:{
+        rules:[
+            // first rule
+            {test:/\.css$/i, exclude:/node_modules/i,use:['style-loader','css-loader']}
+        ]
+    },
 
     // output/exit
     output:{
