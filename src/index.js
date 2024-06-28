@@ -1,10 +1,6 @@
-import "./styles/main.css"
+console.log('Hello Webpack')
+console.log(1+1)
 
-import React from 'react';
-import {createRoot} from 'react-dom/client'
-import App from './App';
-
-const domination = document.getElementById('root')
-const root = createRoot(domination)
-
-root.render(<App />)
+for(let i = 0; i < 20; i++){
+    console.log(i)
+}
