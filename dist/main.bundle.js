@@ -1,1 +1,1 @@
-(()=>{console.log("Hello Webpack"),console.log(2);for(let o=0;o<20;o++)console.log(o)})(),console.log(299);
+console.log("hello webpack"),new Array(100).fill("").map(((e,l)=>l+1)),(()=>{let e=["kyle","john","mary"];e=e.map((e=>e.toUpperCase())),console.log(name)})();

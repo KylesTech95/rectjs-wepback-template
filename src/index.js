@@ -1,6 +1,3 @@
-console.log('Hello Webpack')
-console.log(1+1)
+console.log("hello webpack")
 
-for(let i = 0; i < 20; i++){
-    console.log(i)
-}
+let arr = new Array(100).fill('').map((_,index)=>index+1)

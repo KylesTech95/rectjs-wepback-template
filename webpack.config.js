@@ -1,23 +1,27 @@
 const path = require('path')
 module.exports = {
+
     // mode
-    // mode: "development", // production
-    mode:'production',
+    mode: 'production', // development
+    // mode: 'development', // development
+
     // entry
-    // entry:{
-    //     main:path.resolve(__dirname,'src/index.js') // medium 
-    // },
+    // multi entry: open up more zippers
     entry:[path.resolve(__dirname,'src/index.js'),path.resolve(__dirname,'src/index2.js')],
 
 
 
-
-
-
-    // output
+    // output/exit
     output:{
-        path:path.resolve(__dirname,'dist'), // exit point
-        filename:"[name].bundle.js",
+        path:path.resolve(__dirname,'dist'),
+        filename:'main.bundle.js',
         clean:true
     }
 }
+
+// process
+
+// we have stuff
+// pack our backpack with stuff inside of big zipper (entry)
+
+// throw backpack at client's face
