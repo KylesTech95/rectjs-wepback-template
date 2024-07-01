@@ -4,8 +4,8 @@ const HtmlPlug = require("html-webpack-plugin");
 const MiniPlug = require("mini-css-extract-plugin");
 module.exports = {
   // mode
-  //   mode: "production", // development
-  mode: "development", // development
+    mode: "production", // development
+  // mode: "development", // development
 
   // entry
   // multi entry: open up more zippers

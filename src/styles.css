@@ -11,3 +11,6 @@ body{
     align-items: center;
     box-shadow: 0 16px 8px .5px #333;
 }
+input::placeholder{
+    color:blue;
+}
