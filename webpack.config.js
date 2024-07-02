@@ -55,10 +55,6 @@ module.exports = {
       filename: "index.html",
       clean: true,
       title: "Webpack tutorial",
-      base: {
-        href: "http://localhost:5500/" + "dist" + "/",
-        target: "_blank",
-      },
       template: path.resolve(__dirname, defaultTemplate),
       array: {
         numbers: [1, 2, 4, 5],
